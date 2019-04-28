@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 
 import com.project.smart6.model.IPLPlayer;
 import com.project.smart6.model.IPLSchedule;
-import com.project.smart6.repository.IPLPlayerRepository;
+import com.project.smart6.repository.IPLRepository;
 
 
 @Service
-public class IPLPlayerServiceImpl implements IPLPlayerService {
+public class IPLPlayerServiceImpl implements IPLService {
 
 	@Autowired
-	private IPLPlayerRepository iplPlayerRepository;
+	private IPLRepository iplPlayerRepository;
 
 	@Override
 	public List<IPLPlayer> getAllIPLPLayersByTeam(String iplTeam1, String iplTeam2) 

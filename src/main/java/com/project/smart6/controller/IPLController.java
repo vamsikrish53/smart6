@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.smart6.model.IPLPlayer;
 import com.project.smart6.model.IPLSchedule;
-import com.project.smart6.service.IPLPlayerService;
+import com.project.smart6.service.IPLService;
 
 @RestController
 @RequestMapping("/ipl")
 public class IPLController {
 
 	@Autowired
-	IPLPlayerService iplService;
+	IPLService iplService;
 
 	@GetMapping("/{iplTeam1}vs{iplTeam2}/players")
 	public List<IPLPlayer> playersByTeam(@PathVariable("iplTeam1") String iplTeam1, @PathVariable("iplTeam2") String iplTeam2)

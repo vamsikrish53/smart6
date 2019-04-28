@@ -6,7 +6,7 @@ import com.project.smart6.model.IPLPlayer;
 import com.project.smart6.model.IPLSchedule;
 
 
-public interface IPLPlayerService {
+public interface IPLService {
 	
 	public List<IPLPlayer> getAllIPLPLayersByTeam(String iplTeam1, String iplTeam2);
 
