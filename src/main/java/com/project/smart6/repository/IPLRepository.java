@@ -13,7 +13,7 @@ public interface IPLRepository extends JpaRepository <IPLPlayer, Long> {
 	@Query("select u from IPLPlayer u where u.player_team = ?1 OR u.player_team = ?2 ORDER BY u.player_credit DESC")
 	public List<IPLPlayer> findAllPlayersByTeam(String iplTeam1, String iplTeam2);
 	
-	@Query("select u from IPLSchedule u where u.match_date_time >= ?1")
+	@Query("select u from IPLSchedule u")
 	public List<IPLSchedule> getIplSchedule(String todayDate);
 
 }
